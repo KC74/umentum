@@ -60,29 +60,6 @@ body.page-template-dashboard {
             font-weight: lighter;
         }
 
-
-        // .dashboard-cta {
-        //     margin-top: 1.5rem * 2;
-        //     position: relative;
-
-        //     .dashboard-rectangle:first-child {
-        //         background: $color__main-yellow;
-        //         width: 125px;
-        //         height: 50px;
-        //     }
-        //     .dashboard-rectangle:last-child {
-        //         background: $color__main-blue;
-        //         width: 125px;
-        //         height: 50px;
-        //         position: absolute;
-        //         top: 10px;
-        //         left: 8px;
-        //         display: flex;
-        //         justify-content: center;
-        //         align-items: center;
-        //     }
-        // }
-
         .dashboard-icons {
             @include container(true);
             justify-content: space-between;
@@ -209,6 +186,13 @@ body.page-template-brief {
                     margin-right: 0.75rem;
                   }
             }
+        }
+
+        .brief-back-arrow {
+            position: absolute;
+            transform: translate(-50%, -50%);
+            left: 0;
+            top: 50%;
         }
     }
 }

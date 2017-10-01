@@ -943,3 +943,9 @@ body.page-template-brief {
           content: "• ";
           color: #fcc77c;
           margin-right: 0.75rem; }
+    body.page-template-brief section.brief-main-content .brief-back-arrow {
+      position: absolute;
+      -webkit-transform: translate(-50%, -50%);
+              transform: translate(-50%, -50%);
+      left: 0;
+      top: 50%; }
