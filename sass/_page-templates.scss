@@ -1,6 +1,7 @@
 /*--------------------------------------------------------------
 # Page Templates
 --------------------------------------------------------------*/
+
 /* Page */
 .site {
     display: flex;
@@ -36,23 +37,7 @@ body.page-template-dashboard {
         }
 
         .dashboard-circle {
-            background: $color__main-yellow;
-            width: 120px;
-            height: 120px;
-            border-radius: 50%;
-            position: absolute;
-            transform: translate(-50%, -50%);
-            left: 50%;
-            top: 100%;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-
-            .dashboard-day-number {
-                margin: 0 0 25% 0;
-                font-family: $font__header;
-                font-size: 5rem;
-            }
+            @extend .day-circle;
         }
     }
 
@@ -76,27 +61,27 @@ body.page-template-dashboard {
         }
 
 
-        .dashboard-cta {
-            margin-top: 1.5rem * 2;
-            position: relative;
+        // .dashboard-cta {
+        //     margin-top: 1.5rem * 2;
+        //     position: relative;
 
-            .dashboard-rectangle:first-child {
-                background: $color__main-yellow;
-                width: 125px;
-                height: 50px;
-            }
-            .dashboard-rectangle:last-child {
-                background: $color__main-blue;
-                width: 125px;
-                height: 50px;
-                position: absolute;
-                top: 10px;
-                left: 8px;
-                display: flex;
-                justify-content: center;
-                align-items: center;
-            }
-        }
+        //     .dashboard-rectangle:first-child {
+        //         background: $color__main-yellow;
+        //         width: 125px;
+        //         height: 50px;
+        //     }
+        //     .dashboard-rectangle:last-child {
+        //         background: $color__main-blue;
+        //         width: 125px;
+        //         height: 50px;
+        //         position: absolute;
+        //         top: 10px;
+        //         left: 8px;
+        //         display: flex;
+        //         justify-content: center;
+        //         align-items: center;
+        //     }
+        // }
 
         .dashboard-icons {
             @include container(true);
@@ -144,6 +129,86 @@ body.page-template-dashboard {
             width: 25%;
             background: $color__main-blue;
             height: 5rem;
+        }
+    }
+}
+
+/* Brief */
+body.page-template-brief {
+    background: $color__main-blue;
+    width: 100%;
+    height: 100%;
+
+    .site-content,
+    .content-area,
+    .site-main {
+        width: 100%;
+        height: 100%;
+    }
+
+    .site-main {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    section.brief-main-content {
+        width: 80%;
+        height: 80%;
+        background: #fff;
+        position: relative;
+        display: flex;
+        flex-flow: column nowrap;
+        align-items: center;
+        text-align: center;
+
+        .brief-day-circle {
+            @extend .day-circle;
+            top: 0;
+        }
+
+        h1 {
+            margin: 5rem 0 0;
+            font-family: $font__header;
+            font-weight: bold;
+            font-size: 3rem;
+        }
+
+        h2 {
+            font-weight: lighter;
+            margin: 1.5rem 9rem;
+        }
+
+        .brief-info-container {
+            @include container(true);
+            justify-content: space-around;
+            padding: 0 3rem;
+            text-align: left;
+
+            .brief-list-title {
+                margin-bottom: 0.5rem;
+            }
+
+            .brief-info-title {
+                font-size: 1.5rem;
+                font-weight: lighter;
+            }
+
+            ul {
+                margin: 0;
+                list-style: none;
+                padding: 0;
+                
+                li {
+                    font-weight: lighter;
+                }
+                
+                li:before {
+                    content: "• ";
+                    color: $color__main-yellow; 
+                    margin-right: 0.75rem;
+                  }
+            }
         }
     }
 }

@@ -19,10 +19,10 @@ get_header(); ?>
                 <h1 class="dashboard-welcome">Welcome, Elan</h1>
                 <h2 class="dashboard-quote">"One day, or day one. Your choice."</h2>
                 
-                <div class="dashboard-cta">
-                    <div class="dashboard-rectangle"></div>
-                    <div class="dashboard-rectangle">
-                        <a href="#">let's get it!</a>
+                <div class="cta-button">
+                    <div class="cta-rectangle"></div>
+                    <div class="cta-rectangle">
+                        <a href="<?php echo esc_url(home_url('/brief')) ?>">let's get it!</a>
                     </div>
                 </div>
 
