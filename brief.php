@@ -48,7 +48,7 @@ get_header(); ?>
                 <div class="cta-button">
                     <div class="cta-rectangle"></div>
                     <div class="cta-rectangle">
-                        <a href="<?php echo esc_url(home_url('/dashboard')) ?>">join</a>
+                        <a href="<?php echo esc_url(home_url('/dashboard')) ?>">submit</a>
                     </div>
                 </div>
                 <a class="brief-back-arrow" href="<?php echo esc_url(home_url('/dashboard')) ?>">
