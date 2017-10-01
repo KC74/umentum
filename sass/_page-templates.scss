@@ -1,5 +1,149 @@
 /*--------------------------------------------------------------
 # Page Templates
 --------------------------------------------------------------*/
+/* Page */
+.site {
+    display: flex;
+    height: 100vh;
+}
 
 /* Front page */
+
+/* Dashboard */
+body.page-template-dashboard {
+
+    .site-content,
+    .content-area,
+    .site-main {
+        height: 100%;
+    }
+
+    .site-content {
+        width: 75%;
+    }
+
+    header.dashboard-header {
+        @include container(true);
+        flex-flow: column nowrap;
+        height: 15%;
+        border-bottom: 1px solid #000;
+        text-align: center;
+        position: relative;
+
+        .dashboard-day {
+            margin: 1.25rem 0 0 0;
+            font-size: 1.25rem;
+        }
+
+        .dashboard-circle {
+            background: $color__main-yellow;
+            width: 120px;
+            height: 120px;
+            border-radius: 50%;
+            position: absolute;
+            transform: translate(-50%, -50%);
+            left: 50%;
+            top: 100%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+
+            .dashboard-day-number {
+                margin: 0 0 25% 0;
+                font-family: $font__header;
+                font-size: 5rem;
+            }
+        }
+    }
+
+    section.main-content {
+        @include container(true);
+        width: 80%;
+        margin: 100px auto 0;
+        justify-content: center;
+        align-items: center;
+        flex-flow: column nowrap;
+
+        h1 {
+            margin-bottom: 0;
+            font-family: $font__header;
+            font-size: 3rem;
+            font-weight: bold;
+        }
+
+        h2 { 
+            font-weight: lighter;
+        }
+
+
+        .dashboard-cta {
+            margin-top: 1.5rem * 2;
+            position: relative;
+
+            .dashboard-rectangle:first-child {
+                background: $color__main-yellow;
+                width: 125px;
+                height: 50px;
+            }
+            .dashboard-rectangle:last-child {
+                background: $color__main-blue;
+                width: 125px;
+                height: 50px;
+                position: absolute;
+                top: 10px;
+                left: 8px;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+            }
+        }
+
+        .dashboard-icons {
+            @include container(true);
+            justify-content: space-between;
+            margin-top: 5rem;
+
+            .dashboard-icon-block {
+                text-align: center;
+
+                .dashboard-icon-wrapper {
+                    width: 180px;
+                    height: 180px;
+                    background: url("../../images/grid-button.png");
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
+                    margin-bottom: 1rem;
+
+                    img {
+                        height: 70px;
+                        width: 70px;
+                    }
+                }
+
+                a {
+                    color: #000;
+                }
+            }
+
+            .dashboard-icon-block:last-child {
+                .dashboard-icon-wrapper{
+                    &:last-child {
+                        img {
+                            height: 54px;
+                            width: 75px;
+                        }
+                    }
+                }
+            }
+        }
+    }
+
+    section.bottom-extension {
+        .bottom-ext-side {
+            width: 25%;
+            background: $color__main-blue;
+            height: 5rem;
+        }
+    }
+}

@@ -1,0 +1,40 @@
+/*--------------------------------------------------------------
+# Header
+--------------------------------------------------------------*/
+
+/* Dashboard */
+body.page-template-dashboard {
+    header.site-header {
+        background: $color__main-blue;
+        width: 25%;
+        display: flex;
+        flex-flow: column nowrap;
+        height: 100%;
+
+        .site-branding {
+            display: flex;
+            justify-content: center;
+
+            .header-logo {
+                background: grey;
+                width: 150px;
+                border-radius: 50%;
+                height: 150px;
+                margin: 10% 0 33%;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+            }
+        }
+
+        .menu {
+            display: flex;
+            flex-flow: column nowrap;
+            margin-left: 25%;
+
+            li {
+                margin-bottom: 1.75rem;
+            }
+        }
+    }
+}
