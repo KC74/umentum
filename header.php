@@ -19,12 +19,12 @@
 	<body <?php body_class(); ?>>
 		<div id="page" class="hfeed site">
 			<a class="skip-link screen-reader-text" href="#content"><?php esc_html( 'Skip to content' ); ?></a>
-			<?php if ( ! is_page_template( 'brief.php' ) ) : ?> 
+			<?php if ( (! is_page_template( 'brief.php' )) && (! is_page_template( 'feedback.php' )) ) : ?> 
 			<header id="masthead" class="site-header" role="banner">
 				<div class="site-branding">
 					<h1 class="site-title screen-reader-text"><a href="<?php echo esc_url( home_url( '/' ) ); ?>" rel="home"><?php bloginfo( 'name' ); ?></a></h1>
 					<div class="header-logo">
-						<p class="header-logo-text">Logo</p>
+						<img src="../wp-content/themes/umentum/images/umentum_u.png"/>
 					</div>
 					<p class="site-description"><?php bloginfo( 'description' ); ?></p>
 				</div><!-- .site-branding -->

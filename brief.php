@@ -4,6 +4,8 @@
  *
  * @package Umentum_Theme
  */
+$target_fields = CFS()->get( 'brief_target_audience' );
+$software_fields = CFS()->get( 'suggested_softwares' );
 
 get_header(); ?>
 
@@ -13,18 +15,15 @@ get_header(); ?>
                 <div class="brief-day-circle">
                     <p class="brief-day-number">5</p>
                 </div>
-                <h1 class="brief-title">Airline App</h1>
-                <h2 class="brief-description">
-                    ‘Vancouver Airlines’ is looking to revamp the app design.
-The airline wants a login screen that will draw the users to book a flight.
-                </h2>
+                <h1 class="brief-title"><?php echo CFS()->get('brief_name'); ?></h1>
+                <h2 class="brief-description"><?php echo CFS()->get('brief_description'); ?></h2>
                 <div class="brief-info-container">
                     <div class="brief-info-block">
                         <p class="brief-info-title">Target<br>Audience</p>
                         <ul class="brief-info-list">
-                            <li class="brief-info-item">25-35</li>
-                            <li class="brief-info-item">Tech Savy</li>
-                            <li class="brief-info-item">Discount</li>
+                            <?php foreach ( $target_fields as $field ) : ?>
+                                <li class="brief-info-item"><?php echo $field['brief_point']; ?></li>
+                            <?php endforeach; ?>
                         </ul>
                     </div>
                     <div class="brief-info-block">
@@ -40,7 +39,9 @@ The airline wants a login screen that will draw the users to book a flight.
                     <div class="brief-info-block">
                         <p class="brief-info-title">Suggested<br>Software</p>
                         <ul class="brief-info-list">
-                            <li class="brief-info-item">Sketch</li>
+                            <?php foreach ( $software_fields as $field ) : ?>
+                                <li class="brief-info-item"><?php echo $field['brief_suggested_software']; ?></li>
+                            <?php endforeach; ?>
                         </ul>
                     </div>
                 </div>
