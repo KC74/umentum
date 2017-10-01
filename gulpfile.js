@@ -49,7 +49,7 @@ gulp.task('browser-sync', function () {
     ];
 
     browserSync.init(files, {
-        proxy: 'localhost:3000/umentum',
+        proxy: 'localhost:8888/umentum',
     });
 
     gulp.watch(files).on('change', browserSync.reload);
